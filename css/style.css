@@ -1,0 +1,148 @@
+body {
+	padding: 0;
+	margin: 0;
+	
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+	text-transform: uppercase;
+
+	background-color: #f2f2f2;
+}
+
+a {
+	text-decoration: none;
+}
+
+.button {
+	font: inherit;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+
+	text-align: center;
+	color: #ffffff;
+	vertical-align: middle;
+	text-transform: uppercase;
+
+	background-color: #766357;
+	border: none;
+}
+
+.button:hover,
+.button:focus {
+	background-color: #604e43;
+}
+
+.button:active {
+	color: rgba(255,255,255,.3);
+
+	background-color: #503e33;
+}
+
+.main-header {
+	background-color: #ffffff;
+}
+
+.main-navigation {
+	line-height: 14px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.site-navigation {
+	list-style: none;
+}
+
+.site-navigation a {
+	color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+	color: #81b3d2;
+}
+
+.site-navigation a:active {
+	color: rgba(0, 0, 0, .3);
+}
+
+.features-entry {
+	text-align: center;
+
+	background-image: url("../img/intro.jpg");
+	background-size: 1200px 780px;
+	background-repeat: no-repeat;
+	background-position: top-left;
+}
+
+.features-entry h2 {
+	font-style: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.features-entry p {
+	line-height: 26px;
+}
+
+.first-block,
+.third-block {
+	color: #ffffff;
+	text-align: center;
+	background-color: #81b3d2;
+}
+
+.first-block h2,
+.third-block h2 {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.second-block {
+	background-color: #ffffff;
+}
+
+.features-list,
+.features-block-list {
+	padding: 0;
+	margin: 0;
+	
+	text-align: center;
+	list-style: none;
+}
+
+.feature-item h3 {
+	line-height: 21px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.fourth-block {
+	background-color: #eeeeee;
+}
+
+.features-block-list h2 {
+	line-height: 21px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.search h2 {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #000000;
+
+	text-align: center;
+}
+
+.search p {
+	line-height: 24px;
+
+	text-align: center;
+}
