@@ -16,6 +16,10 @@ a {
 	text-decoration: none;
 }
 
+.container {
+	background-color: #ffffff;
+}
+
 .button {
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 21px;
@@ -80,6 +84,12 @@ a {
 
 .site-navigation a:active {
 	color: rgba(0, 0, 0, .3);
+}
+
+.site-navigation-current a,
+.site-navigation-current a:hover,
+.site-navigation-current a:focus {
+	color: #766357;
 }
 
 .features-entry {
@@ -196,7 +206,137 @@ a {
 	border: 2px solid #e5e5e5;
 }
 
-.footer-tag {
+.filters {
+	color: #ffffff;
+
+	background-color: #6a6f75;
+	background-image: url("../img/filter-background.jpg");
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.filter fieldset {
+	border: none;
+}
+
+.filter legend {
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.filter ul {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+.filter-cost-option input[type="number"] {
+	font: inherit;
+	color: #ffffff;
+
+	background: transparent;
+	border: none;
+}
+
+.filter-button {
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
+
+	background: transparent;
+
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+.result-sort ul {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+.sort-label {
+	font-size: 12px;
+	line-height: 18px;
+	color: #000000;
+}
+
+.sort-list a {
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(0,0,0,.3);
+
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-list a:hover,
+.sort-list a:focus {
+	color: #81b3d2;
+}
+
+.sort-list a:active {
+	color: #000000;
+
+	border: none;
+}
+
+.sort-current a,
+.sort-current a:active {
+	color: #81b3d2;
+
+	border: none;
+}
+
+.result-hotels ul {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+.hotel-title {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.hotel-title:hover,
+.hotel-title:focus {
+	color: #81b3d2;
+}
+
+.hotel-title:active {
+	color: rgba(0,0,0,.3);
+}
+
+.hotels-item .button {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+/* .hotel-star-rate {
+	background-image: url("../img/star.svg");
+	background-repeat: repeat-x;
+} */
+
+.hotel-rate {
+	background-color: #f0f0f0;
+}
+
+.footer-tag,
+.sort-find {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
