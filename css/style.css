@@ -17,7 +17,7 @@ a {
 }
 
 .button {
-	font: inherit;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
@@ -31,15 +31,28 @@ a {
 	border: none;
 }
 
+.alt-button {
+	background-color: #81b3d2;
+}
+
 .button:hover,
 .button:focus {
 	background-color: #604e43;
+}
+
+.alt-button:hover,
+.alt-button:focus {
+	background-color: #669ec0;
 }
 
 .button:active {
 	color: rgba(255,255,255,.3);
 
 	background-color: #503e33;
+}
+
+.alt-button:active {
+	background-color: #5496bd;
 }
 
 .main-header {
@@ -145,4 +158,59 @@ a {
 	line-height: 24px;
 
 	text-align: center;
+}
+
+.search-form {
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+.search-form p {
+	line-height: 26px;
+	font-weight: 700;
+
+	text-align: left;
+}
+
+.search-item input[type="text"],
+.search-item input[type="number"] {
+	font: inherit;
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: 700;
+
+	background-color: #f2f2f2;
+	border: none;
+	outline: none;
+}
+
+.search-item input[type="text"]:hover,
+.search-item input[type="number"]:hover {
+	background-color: #ebebeb;
+}
+
+.search-item input[type="text"]:focus,
+.search-item input[type="number"]:focus {
+	background-color: #ffffff;
+	border: 2px solid #e5e5e5;
+}
+
+.footer-tag {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.footer-social ul {
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+
+.footer-copyright {
+	line-height: 26px;
+	color: #000000;
 }
