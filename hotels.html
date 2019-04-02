@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Гостинницы в Седоне</title>
+  <title>Гостиницы в Седоне</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -31,13 +31,14 @@
     </nav>
   </header>
   
-  <main class="container">
+  <main class="container inner-container">
     
     <h1 class="visually-hidden">Гостиницы в Седоне</h1>
 
     <section class="filters">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
-      <form  class="filter" method="get" action="https://echo.htmlacademy.ru">
+      <div class="inner-wrapper">      
+      <form  class="filter-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-infrastructure">
           <legend>Инфраструктура:</legend>
           <ul>
@@ -91,70 +92,91 @@
           </fieldset>
           <button type="submit" class="button filter-button">Показать</button>
       </form>
+    </div>
     </section>
 
-    <section class="filter-result">
+    <section class="filter-result">      
       <h2 class="visually-hidden">Результат поиска</h2>
       <section class="result-sort">
-        <h3 class="visually-hidden">Сортировка товаров</h3>
-        <p class="sort-find">Найдено: 3</p>
-        <p class="sort-label">Сортировка:</p>
-        <ul class="sort-list">
-          <li class="sort-price sort-current">
-            <a href="#">По цене</a>
-          </li>
-          <li class="sort-type">
-            <a href="#">По типу</a>
-          </li>
-          <li class="sort-rate">
-            <a href="#">По рейтингу</a>
-          </li>
-        </ul>
+        <div class="inner-wrapper"> 
+          <h3 class="visually-hidden">Сортировка товаров</h3>
+          <p class="sort-find">Найдено: 3</p>
+          <p class="sort-label">Сортировка:</p>
+          <ul class="sort-list">
+            <li class="sort-price sort-current">
+              <a href="#">По цене</a>
+            </li>
+            <li class="sort-type">
+              <a href="#">По типу</a>
+            </li>
+            <li class="sort-rate">
+              <a href="#">По рейтингу</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="result-hotels">
         <h3 class="visually-hidden">Найденные гостиницы</h3>
         <ul class="hotels-list">
           <li class="hotels-item">
-            <p class="hotels-item-image">
-              <img src="img/hotels-result-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-            </p>            
-            <a class="hotel-title" href="#">Amara Resort & Spa</a>
-            <p class="hotels-item-info">
-              <span class="hotels-item-type">Гостиница</span>
-              <span class="hotels-item-price">От 4000 р.</span>
-            </p>
-            <a class="button alt-button" href="#">Подробнее</a>
-            <a class="button" href="#">Забронировать</a>
-            <p class="hotel-star-rate visually-hiiden">Четыре звезды</p>
-            <p class="hotel-rate">Рейтинг: 8,5</p>
+            <div class="inner-wrapper"> 
+              <p class="hotels-item-image">
+                <img src="img/hotels-result-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+              </p>
+              <div class="hotels-item-description">
+                <a class="hotels-name" href="#">Amara Resort & Spa</a>
+                <p class="hotels-item-info">
+                  <span class="hotels-item-type">Гостиница</span>
+                  <span class="hotels-item-price">От 4000 р.</span>
+                </p>
+                <a class="button alt-button button-detai" href="#">Подробнее</a>
+                <a class="button button-reserve" href="#">Забронировать</a>
+              </div>
+              <div class="hotels-rate">
+                <p class="star-rate visually-hiiden">Четыре звезды</p>
+                <p class="rate">Рейтинг: 8,5</p>
+              </div>
+            </div>
           </li>
           <li class="hotels-item">
-            <p class="hotels-item-image">
-              <img src="img/hotels-result-2.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-            </p>            
-            <a class="hotel-title" href="#">Desert Quail Inn</a>
-            <p class="hotels-item-info">
-              <span class="hotels-item-type">Мотель</span>
-              <span class="hotels-item-price">От 3000 р.</span>
-            </p>
-            <a class="button button-detail" href="#">Подробнее</a>
-            <a class="button button-reserve" href="#">Забронировать</a>
-            <p class="hotel-star-rate visually-hiiden">Три звезды</p>
-            <p class="hotel-rate">Рейтинг: 8,9</p>
+            <div class="inner-wrapper">
+              <p class="hotels-item-image">
+                <img src="img/hotels-result-2.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+              </p>
+              <div class="hotels-item-description">
+                <a class="hotels-name" href="#">Desert Quail Inn</a>
+                <p class="hotels-item-info">
+                  <span class="hotels-item-type">Мотель</span>
+                  <span class="hotels-item-price">От 3000 р.</span>
+                </p>
+                <a class="button alt-button button-detail" href="#">Подробнее</a>
+                <a class="button button-reserve" href="#">Забронировать</a>
+              </div>
+              <div class="hotels-rate">
+                <p class="star-rate visually-hiiden">Три звезды</p>
+                <p class="rate">Рейтинг: 8,9</p>
+              </div>
+            </div>
           </li>
           <li class="hotels-item">
-            <p class="hotels-item-image">
-              <img src="img/hotels-result-3.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-            </p>            
-            <a class="hotel-title" href="#">Villas at Poco Diablo</a>
-            <p class="hotels-item-info">
-              <span class="hotels-item-type">Апартаменты</span>
-              <span class="hotels-item-price">От 2000 р.</span>
-            </p>
-            <a class="button button-detail" href="#">Подробнее</a>
-            <a class="button button-reserve" href="#">Забронировать</a>
-            <p class="hotel-star-rate visually-hiiden">Две звезды</p>
-            <p class="hotel-rate">Рейтинг: 9,2</p>
+            <div class="inner-wrapper">
+              <p class="hotels-item-image">
+                <img src="img/hotels-result-3.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+              </p>
+              <div class="hotels-item-description">
+                <a class="hotels-name" href="#">Villas at Poco Diablo</a>
+                <p class="hotels-item-info">
+                  <span class="hotels-item-type">Апартаменты</span>
+                  <span class="hotels-item-price">От 2000 р.</span>
+                </p>
+                <a class="button alt-button button-detail" href="#">Подробнее</a>
+                <a class="button button-reserve" href="#">Забронировать</a>
+              </div>
+              <div class="hotels-rate">
+                <p class="star-rate visually-hiiden">Две звезды</p>
+                <p class="rate">Рейтинг: 9,2</p>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
@@ -162,24 +184,26 @@
   </main>
   <footer class="main-footer">
     <div class="container">
-      <p class="footer-tag">#visitSedona</p>
-      <div class="footer-social">
-        <ul>
-          <li>
-            <a class="social-button visually-hidden" href="#">Twitter</a>
-          </li>
-          <li>
-            <a class="social-button visually-hidden" href="#">Facebook</a>
-          </li>
-          <li>
-            <a class="social-button visually-hidden" href="#">Youtube</a>
-          </li>
-        </ul>
+      <div class="inner-wrapper">
+        <p class="footer-tag">#visitSedona</p>
+        <div class="footer-social">
+          <ul>
+            <li>
+              <a class="social-button visually-hidden" href="#">Twitter</a>
+            </li>
+            <li>
+              <a class="social-button visually-hidden" href="#">Facebook</a>
+            </li>
+            <li>
+              <a class="social-button visually-hidden" href="#">Youtube</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer-copyright">
+          Websyte by
+          <a class="copyright-button visually-hidden" href="https://htmlacademy.ru">HTML Academy</a>
+        </p>
       </div>
-      <p class="footer-copyright">
-        Websyte by
-        <a class="copyright-button visually-hidden" href="https://htmlacademy.ru">HTML Academy</a>
-      </p>
     </div>
   </footer>
 </body>
