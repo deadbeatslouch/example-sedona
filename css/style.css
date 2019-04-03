@@ -84,42 +84,63 @@ a {
 
 .main-navigation {
   position: relative;
-
   line-height: 14px;
   font-weight: 700;
   color: #000000;
 }
 
 .main-header-logo {
-  display: block;
   position: absolute;
-  left: 531px;
+  /*left: 531px;*/ 
+  /*left: 44.3%;*/
+  left: 50%;
+  margin-left: -69px;
 
   width: 138px;
-  height: 70px;
+  height: 70px;  
 }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-
-  padding-top: 20px;
-  padding-bottom: 22px;
+  width: 100%;
+  
+  padding: 0;
   margin: 0;
 
   list-style: none;
 }
 
-.site-navigation li {
-  width: 266px;
+.site-navigation li {  
+  padding-top: 20px;
+  padding-bottom: 22px;
+  width: 128px;
+}
+
+.site-navigation li:nth-child(2),
+.site-navigation li:last-child {
+  margin-left: 112px;
 }
 
 .site-navigation li:nth-child(3) {
   margin-left: auto;
 }
 
+.site-navigation li:first-child,
+.site-navigation li:nth-child(2) {
+  text-align: left;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:last-child {
+  text-align: right;
+}
+
 .site-navigation a {
-  color: #000000;
+  display: block;
+
+  color: #000000;  
 }
 
 .site-navigation a:hover,
@@ -501,37 +522,33 @@ main.inner-container {
   background-color: #f0f0f0;
 }
 
+.main-footer {  
+  position: relative;
+}
+
 .main-footer .container{
-  background-color: rgba(255,255,255,.9);
-  margin-bottom: -15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  min-height: 120px;
 
   background-color: #ffffff;
 }
 
-.footer-transparent {
-  position: relative;
-}
-
-.container .transparent-contqainer{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 1200px;
-  min-height: 120px;
+.transparent-contqainer{
+  width: 1200px;  
   position: absolute;
   top: -119px;
+  left: 50%;
+  margin-left: -600px;
 
-  background-color: rgba(255,255,255,.9);
-}
-
-.main-footer .inner-wrapper {
-  display: flex;
-  justify-content: space-between;
+  opacity: 0.9;
 }
 
 .footer-tag,
 .sort-find {
+  margin: 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
