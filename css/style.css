@@ -44,7 +44,7 @@ a {
 }
 
 .button {
-  display: block;
+  display: inline-block;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -145,8 +145,6 @@ a {
 }
 
 .site-navigation a {
-  display: block;
-
   color: #000000;  
 }
 
@@ -162,6 +160,8 @@ a {
 .site-navigation-current a,
 .site-navigation-current a:hover,
 .site-navigation-current a:focus {
+  outline: none;
+
   color: #766357;
 }
 
@@ -539,7 +539,7 @@ a {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  padding-left: 39px;
+  padding-left: 40px;
   padding-bottom: 25px;
 
   cursor: pointer;
@@ -575,6 +575,7 @@ a {
 
 .filter-input:checked + label::before {
   display: none;
+  box-shadow: none;
 }
 
 .filter-input:disabled + label::before,
@@ -621,16 +622,18 @@ a {
 }
 
 .price-controls label {
-  padding-bottom: 10px;
-
   font-size: 14px;
-  line-height: 32px;
+  line-height: 31px;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
   padding-left: 65px;
+}
+
+.price-controls .min-price {
+  width: 82px;
 }
 
 .price-controls input {
@@ -647,7 +650,7 @@ a {
 .range-controls {
   position: relative;
 
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .range-controls .scale {
@@ -689,8 +692,9 @@ a {
 }
 
 .filter-button {
-  margin: 0 auto 22px;
-  padding: 6px 30px;
+  display: block;
+  margin: 0 auto 34px;
+  padding: 2px 30px;
 
   font-size: 16px;
   line-height: 26px;
@@ -717,22 +721,27 @@ a {
 
 .result-sort .inner-wrapper {  
   display: flex;
+  justify-content: space-between;
+}
+
+.sort-by-type {
+  display: flex;
+  justify-content: space-between;
+  width: 518px;
 }
 
 .sort-label {
+  padding-top: 23px;
+  padding-left: 8px;
+
   font-size: 12px;
   line-height: 18px;
   color: #000000;
 }
 
-.result-sort p {
-  margin: 0;
-  padding-top: 31px;
-  padding-bottom: 31px;
-}
-
 .sort-find {
-  margin: 0;
+  display: block;
+  margin: 30px 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -751,7 +760,11 @@ a {
 
 .sort-list li {
   text-align: center;
-  width: 96px;
+  margin-right: 33px;
+}
+
+.sort-list li:last-child {
+  margin-right: 0;
 }
 
 .sort-list a {
@@ -760,6 +773,10 @@ a {
   color: rgba(0,0,0,.3);  
 
   border-bottom: 1px dotted #81b3d2;
+}
+
+li.sort-price {
+  text-align: right;
 }
 
 .sort-list a:hover,
@@ -780,6 +797,29 @@ a {
   border: none;
 }
 
+.sort-by-order ul {
+  display: flex;
+  justify-content: space-between;
+
+  width: 35px;
+  padding: 0;
+  margin: 0;
+  margin-top: 34px;
+
+  list-style: none;
+}
+
+.sort-by-order path:hover,
+.sort-by-order path:focus {
+  fill: #000000;
+}
+
+.sort-by-order path:active {
+  fill: #81b3d2;
+}
+
+/*===============Карточки==============================*/
+
 .result-hotels ul {
   padding: 0;
   margin: 0;
@@ -793,14 +833,14 @@ a {
 }
 
 .hotels-item-image {
-  margin-right: 30px;
-}
-
-.hotels-item-description {
-  margin-right: auto;
+  padding: 0;
+  margin: 30px 30px 24px 0;
 }
 
 .hotels-name {
+  margin-top: -7px;
+  display: block;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -816,16 +856,61 @@ a {
   color: rgba(0,0,0,.3);
 }
 
+.hotels-item-description p {
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-item-info span {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.hotels-item-type {
+  width: 112px;
+}
+
 .hotels-item-description .button {
+  padding: 3px 17px;
+
   font-size: 14px;
   line-height: 21px;
 }
 
+.button-detail {
+  background-color: #81b3d2;
+}
+
 .hotels-rate {
+  margin-left: auto;
   text-align: right;
 }
 
+.hotels-item .star-rate {
+  display: inline-block;
+
+  margin: 0;
+  padding-bottom: 11px;
+  width: 72px;
+  height: 17px;
+
+  background-color: inherit;
+  background-image: url("../img/star.svg");
+  background-repeat: repeat-x;
+}
+
+.hotels-item:nth-child(2) .star-rate {
+  width: 54px;
+}
+
+.hotels-item:nth-child(3) .star-rate {
+  width: 36px;
+}
+
 .hotels-rate .rate {
+  margin: 0;
+  margin-top: 30px;
+  padding: 4px 12px 3px 16px;
   background-color: #f0f0f0;
 }
 
@@ -838,7 +923,7 @@ a {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  min-height: 130px;
+  min-height: 120px;
 
   background-color: #ffffff;
 }
@@ -849,6 +934,7 @@ a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  min-height: 123px;
 
   background-color: rgba(255,255,255,.9);
 }

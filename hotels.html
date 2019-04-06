@@ -76,8 +76,8 @@
         <fieldset class="filter-cost">
           <legend>Стоимость в сутки (р):</legend>
             <div class="price-controls">
-              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-              <label class="max-price">от <input type="text" name="max-price" value="3000"></label>
+              <label class="min-price">От <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
             </div>
             <div class="range-controls">
               <div class="scale">
@@ -96,21 +96,37 @@
     <section class="filter-result">      
       <h2 class="visually-hidden">Результат поиска</h2>
       <section class="result-sort">
-        <div class="inner-wrapper"> 
-          <h3 class="visually-hidden">Сортировка товаров</h3>
-          <p class="sort-find">Найдено: 3</p>
-          <p class="sort-label">Сортировка:</p>
-          <ul class="sort-list">
-            <li class="sort-price sort-current">
-              <a href="#">По цене</a>
-            </li>
-            <li class="sort-type">
-              <a href="#">По типу</a>
-            </li>
-            <li class="sort-rate">
-              <a href="#">По рейтингу</a>
-            </li>
-          </ul>
+        <h3 class="visually-hidden">Сортировка товаров</h3>
+        <div class="inner-wrapper">
+          <div class="sort-by-type">          
+            <p class="sort-find">Найдено: 3</p>
+            <p class="sort-label">Сортировка:</p>
+            <ul class="sort-list">
+              <li class="sort-price sort-current">
+                <a href="#">По цене</a>
+              </li>
+              <li class="sort-type">
+                <a href="#">По типу</a>
+              </li>
+              <li class="sort-rate">
+                <a href="#">По рейтингу</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sort-by-order">
+            <ul>
+              <li><a class="order-button" href="#"><span class="visually-hidden">Сортировать по возрастанию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+                </svg>
+              </a></li>
+              <li><a class="order-button" href="#"><span class="visually-hidden">Сортировать по убыванию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+                </svg>
+              </a></li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="result-hotels">
@@ -127,7 +143,7 @@
                   <span class="hotels-item-type">Гостиница</span>
                   <span class="hotels-item-price">От 4000 р.</span>
                 </p>
-                <a class="button alt-button button-detai" href="#">Подробнее</a>
+                <a class="button button-detail" href="#">Подробнее</a>
                 <a class="button button-reserve" href="#">Забронировать</a>
               </div>
               <div class="hotels-rate">
@@ -147,7 +163,7 @@
                   <span class="hotels-item-type">Мотель</span>
                   <span class="hotels-item-price">От 3000 р.</span>
                 </p>
-                <a class="button alt-button button-detail" href="#">Подробнее</a>
+                <a class="button button-detail" href="#">Подробнее</a>
                 <a class="button button-reserve" href="#">Забронировать</a>
               </div>
               <div class="hotels-rate">
@@ -167,7 +183,7 @@
                   <span class="hotels-item-type">Апартаменты</span>
                   <span class="hotels-item-price">От 2000 р.</span>
                 </p>
-                <a class="button alt-button button-detail" href="#">Подробнее</a>
+                <a class="button button-detail" href="#">Подробнее</a>
                 <a class="button button-reserve" href="#">Забронировать</a>
               </div>
               <div class="hotels-rate">
