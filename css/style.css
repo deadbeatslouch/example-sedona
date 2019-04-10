@@ -22,7 +22,7 @@ input[type="radio"].visually-hidden {
   margin: -1px;
   border: 0;
   padding: 0;
-
+  
   white-space: nowrap;
 
   clip-path: inset(100%);
@@ -59,31 +59,15 @@ a {
   border: none;
 }
 
-.alt-button {
-  width: 458px;
-  height: 58px;
-
-  background-color: #81b3d2;
-}
-
 .button:hover,
 .button:focus {
   background-color: #604e43;
-}
-
-.alt-button:hover,
-.alt-button:focus {
-  background-color: #669ec0;
 }
 
 .button:active {
   color: rgba(255,255,255,.3);
 
   background-color: #503e33;
-}
-
-.alt-button:active {
-  background-color: #5496bd;
 }
 
 .main-header {
@@ -228,7 +212,7 @@ a {
 .first-block p,
 .third-block p {
   margin: 0;
-  padding-bottom: 21px;
+  padding-bottom: 24px;
 }
 
 .first-block p:nth-child(3),
@@ -357,8 +341,7 @@ a {
 
 .features-block-list p {
   margin: 0;
-  padding-top: 23px;
-  padding-bottom: 5px;
+  padding: 26px 0 6px;
 }
 
 .feature-block-item p:nth-child(3) {
@@ -370,24 +353,32 @@ a {
 }
 
 .search-block {
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   min-height: 266px;
 
   position: relative;
 }
 
 .search-block h2 {
+  margin: 52px 0 24px;
+  padding: 0;
+
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
   
-  padding-top: 25px;
   text-align: center;
 }
 
 .search-block p {
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+
   line-height: 24px;
 
   text-align: center;
@@ -397,25 +388,22 @@ a {
   width: 568px;
   padding-top: 30px;
   padding-bottom: 30px;
-
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -284px;
 }
 
-.search-form {
+.modal-search {
   display: flex;
   flex-wrap: wrap;
+
+  /*display: none;*/
   
+  position: absolute;
+  top: 292px;
+  left: 50%;
+  margin-left: -284px;
   box-sizing: border-box;
   padding: 55px;
   width: 568px;
   min-height: 395px;
-  position: absolute;
-  top: 266px;
-  left: 50%;
-  margin-left: -284px;
 
   color: #000000;
 
@@ -424,12 +412,14 @@ a {
 }
 
 .search-item {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
 
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
-  padding-bottom: 30px;
 
   width: 460px;
 
@@ -437,18 +427,30 @@ a {
   font-weight: 700;  
 }
 
+.search-item:nth-child(3),
+.search-item:nth-child(4) {
+  width: 226px;
+  margin-bottom: 40px;
+}
+
 .search-item label {
   align-self: center;
+}
+
+.search-item:nth-child(4) {
+  margin-left: auto;
 }
 
 .search-item:nth-child(4) label {
   margin-left: 50px;
 }
 
-.search-item input { 
+.search-item input {
   box-sizing: border-box;
   width: 346px;
-  padding: 0 12px;
+  padding: 0;
+  padding-right: 37px;
+  padding-left: 12px;
 
 
   font: inherit;
@@ -456,41 +458,157 @@ a {
   text-transform: uppercase;
   font-weight: 700;
 
-  background-color: #f2f2f2;
-  border: none;
+  background-color: #f2f2f2;  
+  border: 2px solid #f2f2f2;
   outline: none;
 }
 
-.search-item:nth-child(3),
-.search-item:nth-child(4) {
-  width: 229px;
-  margin-bottom: 11px;
+.search-item input::-webkit-input-placeholder {
+  color: #000;
 }
+
+/*placeholder скрывается при фокусе*/
+/* .search-item input:focus::-webkit-input-placeholder {
+  color: transparent;
+} */
 
 .search-item:nth-child(3) input,
 .search-item:nth-child(4) input {
   width: 114px;
+  padding-left: 35px;
   text-align: center;
 }
 
 .search-item input:hover {
   background-color: #ebebeb;
-  box-sizing: border-box;
+  border: 2px solid #ebebeb;
 }
 
 .search-item input:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
-  box-sizing: border-box;
 }
 
-.search-form .alt-button {
+.search-calendar svg {
+  position: absolute;
+  top: 7px;
+  left: 428px;
+
+  width: 21px;
+  height: 22px;
+
+  cursor: pointer;
+}
+
+.search-item path {
+  fill: #cacaca;
+}
+
+.search-item:hover path,
+.search-item:focus path  {
+  fill: #000000;
+}
+
+.search-item:active path {
+  fill: #81b3d2;
+}
+
+/*---------- и + для инпутов---------*/
+
+.number {
+  position: relative;
+}
+
+.number-controls {
+  position: absolute;
+}
+
+.nc-plus,
+.nc-minus {
+  position: absolute;
+  top: 5px;
+  left: 205px;
+
+  width: 25px;  
+  height: 25px;
+
+  cursor: pointer;
+}
+
+.nc-minus {
+  left: 125px;
+}
+
+.nc-minus::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+
+  width: 12px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.nc-plus::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -3px;
+
+  width: 11px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.nc-plus::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -3px;
+
+  width: 11px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+
+  transform: rotate(90deg);
+}
+
+.nc-minus:hover::before,
+.nc-plus:hover::before,
+.nc-plus:hover::after {
+  background-color: #000000;
+}
+
+.nc-minus:active::before,
+.nc-plus:active::before,
+.nc-plus:active::after {
+  background-color: #81b3d2;
+}
+
+.alt-button {
   align-self: flex-end;
+  width: 100%;
+  padding: 16px 0;
+
+  background-color: #81b3d2;
+}
+
+
+.alt-button:hover,
+.alt-button:focus {
+  background-color: #669ec0;
+}
+
+
+.alt-button:active {
+  background-color: #5496bd;
 }
 
 .map {
   margin: 0;
-  margin-top: -14px;
   padding: 0;
 }
 
@@ -578,6 +696,13 @@ a {
   box-shadow: none;
 }
 
+
+.filter-input:focus + label::before,
+.filter-input:focus + label::after {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color-;
+}
+
 .filter-input:disabled + label::before,
 .filter-input:disabled + label::after {
   opacity: 0.5;
@@ -647,6 +772,11 @@ a {
   border: none;
 }
 
+.price-controls input:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color-;
+}
+
 .range-controls {
   position: relative;
 
@@ -677,6 +807,8 @@ a {
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+
+  cursor: pointer;
 }
 
 .range-toggle:hover {
@@ -712,6 +844,8 @@ a {
   color: #000000;
 
   background-color: #ffffff;
+
+  outline: none;
 }
 
 .result-sort,
@@ -879,6 +1013,16 @@ li.sort-price {
 
 .button-detail {
   background-color: #81b3d2;
+}
+
+.button-detail:hover,
+.button-detail:focus {
+  background-color: #669ec0;
+}
+
+
+.button-detail:active {
+  background-color: #5496bd;
 }
 
 .hotels-rate {
