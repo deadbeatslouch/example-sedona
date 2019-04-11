@@ -123,22 +123,18 @@
               <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
             </svg>
         </p>
-        <div class="search-item number">
+        <p class="search-item number">
           <label for="adults">Взрослые:</label>
+          <button type="button" class="nc-minus count-button"><span class="visually-hidden">-</span></button>
+          <button type="button" class="nc-plus count-button"><span class="visually-hidden">+</span></button>
           <input id="adults" type="text" placeholder="2" name="adults">
-          <div class="number-controls">
-            <div class="nc-plus"><span class="visually-hidden">+</span></div>
-            <div class="nc-minus"><span class="visually-hidden">-</span></div>
-          </div>
-        </div>
-        <div class="search-item number">
+        </p>
+        <p class="search-item number">
           <label for="kids">Дети:</label>
+          <button type="button" class="nc-minus count-button"><span class="visually-hidden">-</span></button> 
+          <button type="button" class="nc-plus count-button"><span class="visually-hidden">+</span></button>
           <input id="kids" type="text" placeholder="0" name="kids">
-          <div class="number-controls">
-            <div class="nc-plus"><span class="visually-hidden">+</span></div>
-            <div class="nc-minus"><span class="visually-hidden">-</span></div>
-          </div>
-        </div>
+        </p>
         <button class="button alt-button" type="submit">Найти</button>
       </form>
       </div>      
@@ -179,7 +175,5 @@
       </p>
     </div>
   </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/input.js"></script>
 </body>
 </html>
