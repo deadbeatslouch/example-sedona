@@ -949,6 +949,10 @@ a {
   outline: 5px auto -webkit-focus-ring-color-;
 }
 
+.price-controls input::-webkit-input-placeholder {
+  color: #fff;
+}
+
 .range-controls {
   position: relative;
 
@@ -1239,7 +1243,7 @@ li.sort-price {
 .hotels-item .star-rate {
   display: inline-block;
 
-  width: 72px;
+  width: 93px;
   height: 17px;
   margin: 0;
   padding-bottom: 11px;
@@ -1247,14 +1251,15 @@ li.sort-price {
   background-color: inherit;
   background-image: url('../img/star.svg');
   background-repeat: repeat-x;
+  background-size: 24px 17px;
 }
 
 .hotels-item:nth-child(2) .star-rate {
-  width: 54px;
+  width: 68px;
 }
 
 .hotels-item:nth-child(3) .star-rate {
-  width: 36px;
+  width: 44px;
 }
 
 .hotels-rate .rate {
