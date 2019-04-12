@@ -427,13 +427,15 @@ a {
 }
 
 .modal-search {
-  /*display: none;*/
   position: absolute;
   left: 50%;
 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /*display: none;*/
+
+  z-index: 3;
 
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -458,6 +460,7 @@ a {
   line-height: 26px;
 
   position: relative;
+  z-index: 2;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,7 +622,10 @@ a {
 
 .nc-minus:hover::before,
 .nc-plus:hover::before,
-.nc-plus:hover::after {
+.nc-plus:hover::after,
+.nc-minus:focus::before,
+.nc-plus:focus::before,
+.nc-plus:focus::after {
   background-color: #000;
 }
 
@@ -630,13 +636,9 @@ a {
 }
 
 .count-button {
-  /*display: inline-block;*/
-
-  /*text-align: center;*/
-  /*vertical-align: middle;*/
-
   color: #000;
   border: none;
+  outline: none;
   background-color: transparent;
 }
 
@@ -661,9 +663,24 @@ a {
   background-color: #5496bd;
 }
 
-.map {
+.search-map {
+  position: relative;
+}
+
+.search-map img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
   margin: 0;
-  padding: 0;
+}
+
+.search-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .filters {
@@ -1185,6 +1202,8 @@ li.sort-price {
   position: absolute;
   bottom: 0;
   left: 50%;
+
+  z-index: 3;
 
   width: 1200px;
   min-height: 126px;
