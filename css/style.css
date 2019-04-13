@@ -627,38 +627,40 @@ a {
   background-color: #fff;
 }
 
-.search-calendar svg {
-  position: absolute;
-  top: 7px;
-  left: 428px;
+.search-calendar {
+  position: relative;
+}
 
-  width: 21px;
-  height: 22px;
+.calendar-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  width: 25px;
+  height: 25px;
 
   cursor: pointer;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: url(../img/calendar.svg);
+  background-repeat: no-repeat;
 }
 
-.search-item path {
-  fill: #a9a9a9;
+.calendar-button:hover,
+.calendar-button:focus {
+  background-image: url(../img/calendar-hov.svg);
 }
 
-.search-item:hover path,
-.search-item:focus path {
-  fill: #000;
-}
-
-.search-item:active path {
-  fill: #81b3d2;
+.calendar-button:active {
+  background-image: url(../img/calendar-act.svg);
 }
 
 /*- и + для инпутов*/
 
 .number {
   position: relative;
-}
-
-.number-controls {
-  position: absolute;
 }
 
 .nc-plus,
