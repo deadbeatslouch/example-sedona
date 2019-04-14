@@ -74,15 +74,11 @@ a {
   background-color: #503e33;
 }
 
-.main-header {
-  background-color: #fff;
-}
-
 .main-navigation {
+  position: relative;
+  
   font-weight: 700;
   line-height: 14px;
-
-  position: relative;
 
   color: #000;
 }
@@ -91,6 +87,7 @@ a {
   position: absolute;
   z-index: 1;
   left: 50%;
+  top: 0;
 
   width: 138px;
   height: 70px;
@@ -102,7 +99,6 @@ a {
   display: -ms-flexbox;
   display: flex;
 
-  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -110,38 +106,31 @@ a {
 
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .site-navigation li {
-  width: 128px;
+  width: 23%;
+}
+
+.site-navigation a {
+  display: block;
   padding-top: 20px;
   padding-bottom: 22px;
+  color: #000;
 }
 
-.site-navigation li:nth-child(2),
-.site-navigation li:last-child {
-  margin-left: 112px;
-}
-
-.site-navigation li:nth-child(3) {
-  margin-left: auto;
-}
-
-.site-navigation li:first-child,
+.site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
   text-align: left;
 }
 
 .site-navigation li:nth-child(3),
-.site-navigation li:last-child {
+.site-navigation li:nth-child(4) {
   text-align: right;
 }
 
-.site-navigation a {
-  color: #000;
+.site-navigation li:nth-child(3) {
+  margin-left: auto;
 }
 
 .site-navigation a:hover,
