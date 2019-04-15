@@ -1323,17 +1323,9 @@ li.sort-price {
   color: #000;
 }
 
-/*.transparent-container > .footer-tag {
-  margin-bottom: 8px;
-}*/
-
 .footer-social {
   width: 33%;
 }
-
-/*.transparent-container > .footer-social {
-  margin-bottom: 6px;
-}*/
 
 .footer-social ul {
   display: -webkit-box;
@@ -1403,10 +1395,6 @@ li.sort-price {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
-/*.transparent-container > .footer-copyright {
-  margin-bottom: 8px;
-}*/
 
 .copyright-button {
   height: 41px;
